@@ -229,6 +229,34 @@ a {
   backdrop-filter: blur(18px);
 }
 
+.cta-card {
+  border-color: rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(102, 87, 223, 0.32), transparent 25rem),
+    #17171f;
+  color: #f8f7ff;
+  box-shadow: 0 1.25rem 4rem rgba(10, 10, 18, 0.18);
+}
+
+.cta-kicker {
+  color: #b9b5dd;
+}
+
+.cta-copy {
+  color: #c9c7d4;
+}
+
+.cta-button {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #f8f7ff;
+  color: #17171f;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #5545d2;
+}
+
 .card-hover {
   transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
