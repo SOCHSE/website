@@ -42,7 +42,7 @@ export const privateWork = [
   },
   {
     title: "Vaartha",
-    label: "Private passion project",
+    label: "Private OSINT tool",
     state: "Research in progress",
     description:
       "An intelligence-gathering application exploring how information from sources such as X and YouTube can be gathered, transcribed, analyzed, and connected.",
@@ -59,7 +59,7 @@ export const privateWork = [
     label: "Private monitoring system",
     state: "In personal use",
     description:
-      "A Python and Android system for monitoring high-impact public statements and surfacing events relevant to energy-market research.",
+      "A Python and Android system tracking selected posts and reporting from X/Twitter, Truth Social, and Axios to surface events relevant to energy-market research.",
   },
   {
     title: "kbtrain",

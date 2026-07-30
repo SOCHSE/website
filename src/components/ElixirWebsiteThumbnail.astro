@@ -1,0 +1,34 @@
+---
+interface Props {
+  class?: string;
+  showLocation?: boolean;
+}
+
+const { class: className = "", showLocation = false } = Astro.props;
+---
+
+<div class:list={["relative overflow-hidden bg-[var(--accent-soft)]", className]}>
+  <img
+    class="absolute inset-0 h-full w-full object-cover object-top"
+    src="/images/elixir-ayurveda-website.webp"
+    alt="Elixir Ayurveda public website homepage"
+    width="1199"
+    height="683"
+    decoding="async"
+  />
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
+    aria-hidden="true"
+  ></div>
+  <div class="absolute inset-x-0 bottom-0 p-7 text-white sm:p-8">
+    <span class="inline-flex rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-zinc-900">
+      Public website
+    </span>
+    <p class="mt-4 text-sm font-semibold">Elixir Ayurveda</p>
+    {
+      showLocation && (
+        <p class="mt-1 text-xs text-white/75">Healthcare · Kerala</p>
+      )
+    }
+  </div>
+</div>

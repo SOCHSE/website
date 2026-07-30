@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ElixirWebsiteThumbnail from "../components/ElixirWebsiteThumbnail.astro";
 import { privateWork, services } from "../data/site";
 ---
 
@@ -135,16 +136,11 @@ import { privateWork, services } from "../data/site";
             overviews with no public access or proof.
           </p>
         </div>
-        <a class="text-link" href="/work/">See publication boundaries <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="/work/">Explore all work <span aria-hidden="true">→</span></a>
       </div>
 
       <article class="card mt-12 grid overflow-hidden lg:grid-cols-[0.75fr_1.25fr]">
-        <div class="flex min-h-64 items-end bg-[var(--accent-soft)] p-7">
-          <div>
-            <span class="tag">Public website</span>
-            <p class="mt-5 text-sm font-semibold text-[var(--accent)]">Elixir Ayurveda</p>
-          </div>
-        </div>
+        <ElixirWebsiteThumbnail class="min-h-56 lg:min-h-64" />
         <div class="p-7 sm:p-9">
           <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Website migration + digital presence</p>
           <h3 class="mt-4 text-2xl font-semibold tracking-[-0.035em]">A public healthcare website with a clearer foundation.</h3>
@@ -177,6 +173,19 @@ import { privateWork, services } from "../data/site";
             </article>
           ))
         }
+      </div>
+
+      <div class="card mt-4 flex flex-col justify-between gap-5 p-6 sm:flex-row sm:items-center">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">More private work</p>
+          <p class="mt-2 text-sm leading-6 text-[var(--text-soft)]">
+            The full work index also includes Market Event Tracker and kbtrain,
+            an Android machine-learning exploration in progress.
+          </p>
+        </div>
+        <a class="text-link shrink-0" href="/work/">
+          View all five systems <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </section>

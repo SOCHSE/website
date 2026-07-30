@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ElixirWebsiteThumbnail from "../components/ElixirWebsiteThumbnail.astro";
 import PageHero from "../components/PageHero.astro";
 import { privateWork } from "../data/site";
 ---
@@ -18,13 +19,7 @@ import { privateWork } from "../data/site";
   <section class="section">
     <div class="site-container">
       <article class="card grid overflow-hidden lg:grid-cols-[0.7fr_1.3fr]">
-        <div class="flex min-h-72 flex-col justify-between bg-[var(--accent-soft)] p-8">
-          <span class="tag w-fit">Public website</span>
-          <div>
-            <p class="text-sm font-semibold text-[var(--accent)]">Elixir Ayurveda</p>
-            <p class="mt-1 text-xs text-[var(--text-soft)]">Healthcare · Kerala</p>
-          </div>
-        </div>
+        <ElixirWebsiteThumbnail class="min-h-56 lg:min-h-72" showLocation />
         <div class="p-8 sm:p-10 lg:p-12">
           <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Website migration + digital presence</p>
           <h2 class="mt-5 text-3xl font-semibold tracking-[-0.045em]">A public website on a maintainable foundation.</h2>
