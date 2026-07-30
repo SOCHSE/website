@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CompassMark from "../components/CompassMark.astro";
 import ElixirWebsiteThumbnail from "../components/ElixirWebsiteThumbnail.astro";
 import { privateWork, services } from "../data/site";
 ---
@@ -33,11 +34,13 @@ import { privateWork, services } from "../data/site";
       <div class="card relative overflow-hidden p-3 sm:p-4">
         <div class="rounded-[1rem] border border-[var(--line)] bg-[var(--surface-solid)] p-5 shadow-[var(--shadow-sm)] sm:p-6">
           <div class="flex items-center justify-between border-b border-[var(--line)] pb-4">
-            <div>
-              <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Compass</p>
-              <p class="mt-1 text-sm font-semibold">A clearer operating loop</p>
+            <div class="min-w-0 pr-4">
+              <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">SOCHSE Compass</p>
+              <p class="mt-1 max-w-xs text-sm font-semibold leading-5">
+                See what matters. Decide what happens next.
+              </p>
             </div>
-            <span class="tag">Illustrative</span>
+            <CompassMark />
           </div>
           <div class="mt-6 space-y-3">
             {
