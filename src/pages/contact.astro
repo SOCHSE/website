@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Contact SOCHSE about a difficult workflow, fragmented data, digital presence, or focused software problem."
+  path="/contact/"
+>
+  <PageHero
+    eyebrow="Contact"
+    title="Start with the problem."
+    description="Share the current situation, who it affects, and what a useful change would look like. A first conversation should create clarity even when custom software is not the answer."
+  />
+
+  <section class="section">
+    <div class="site-container grid gap-6 lg:grid-cols-[1fr_0.7fr]">
+      <article class="card p-8 sm:p-10">
+        <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Email</p>
+        <a class="mt-4 block text-2xl font-semibold tracking-[-0.035em] text-[var(--accent)] sm:text-3xl" href="mailto:sochsecompass@gmail.com">
+          sochsecompass@gmail.com
+        </a>
+        <p class="mt-5 max-w-xl text-sm leading-7 text-[var(--text-soft)]">
+          Include no passwords, API tokens, health information, financial
+          account details, private datasets, or other sensitive material in an
+          initial message.
+        </p>
+        <a
+          class="button button-primary mt-8"
+          href="mailto:sochsecompass@gmail.com?subject=SOCHSE%20consulting%20enquiry"
+        >
+          Write an email
+        </a>
+      </article>
+
+      <aside class="card p-8">
+        <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Helpful context</p>
+        <ul class="mt-6 space-y-4 text-sm leading-6 text-[var(--text-soft)]">
+          <li class="flex gap-3"><span class="text-[var(--accent)]">01</span><span>What feels difficult or fragmented today?</span></li>
+          <li class="flex gap-3"><span class="text-[var(--accent)]">02</span><span>Who uses the current process?</span></li>
+          <li class="flex gap-3"><span class="text-[var(--accent)]">03</span><span>What would become easier if the work succeeded?</span></li>
+          <li class="flex gap-3"><span class="text-[var(--accent)]">04</span><span>Are there existing tools, deadlines, or constraints?</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

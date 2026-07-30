@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="SOCHSE Compass"
+  description="SOCHSE Compass is a client-owned marketing portal for clear reporting, plain-language requests, and governed decisions."
+  path="/compass/"
+>
+  <PageHero
+    eyebrow="SOCHSE Compass"
+    title="Marketing direction. Under your control."
+    description="Compass is being developed as an isolated client-owned portal for understanding marketing activity, requesting help, and making bounded routine decisions."
+  />
+
+  <section class="section">
+    <div class="site-container grid gap-4 md:grid-cols-2">
+      {
+        [
+          ["See what matters", "Bring account health, spend, outcomes, and open questions into one understandable view."],
+          ["Ask in plain English", "Use a helpdesk-style request flow when a need is not yet available as a point-and-click capability."],
+          ["Decide safely", "Preview governed actions, see evidence and limits, then confirm only when the decision belongs to the client."],
+          ["Keep ownership", "Run a separate installation with client-controlled data, credentials, database, reports, logs, and backups."],
+        ].map(([title, copy], index) => (
+          <article class="card p-7 sm:p-9">
+            <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-[var(--accent-soft)] text-sm font-bold text-[var(--accent)]">
+              {index + 1}
+            </span>
+            <h2 class="mt-9 text-2xl font-semibold tracking-[-0.035em]">{title}</h2>
+            <p class="mt-4 text-base leading-7 text-[var(--text-soft)]">{copy}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section divider">
+    <div class="site-container grid items-start gap-12 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow">Operating boundary</span>
+        <h2 class="section-title">Software supports the client. It does not replace them.</h2>
+        <p class="lede">
+          Compass is designed around explicit authorization, narrow roles,
+          previews, confirmation, verification, and audit. Free-text requests do
+          not directly execute changes.
+        </p>
+      </div>
+      <div class="card p-7 sm:p-9">
+        <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">First integration direction</p>
+        <h3 class="mt-4 text-xl font-semibold">Read-only Google Ads reporting</h3>
+        <p class="mt-4 text-sm leading-7 text-[var(--text-soft)]">
+          SOCHSE is preparing the API application and isolated connector.
+          Clients keep ownership of advertising accounts, billing, campaigns,
+          budgets, decisions, and authorization. Production availability
+          depends on Google approval and completed client onboarding.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section divider">
+    <div class="narrow-container">
+      <span class="eyebrow">Current status</span>
+      <h2 class="section-title">Under active development with Elixir Ayurveda as first pilot.</h2>
+      <p class="lede">
+        Compass is not offered as a public self-service product today. SOCHSE is
+        building and validating it through carefully scoped client work.
+      </p>
+      <a class="button button-primary mt-8" href="/contact/">Discuss a similar need</a>
+    </div>
+  </section>
+</BaseLayout>

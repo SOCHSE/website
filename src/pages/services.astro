@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import { services } from "../data/site";
+---
+
+<BaseLayout
+  title="Services"
+  description="SOCHSE consulting, focused custom software, automation, and digital-presence services."
+  path="/services/"
+>
+  <PageHero
+    eyebrow="Services"
+    title="Choose the smallest useful intervention."
+    description="SOCHSE starts by understanding the problem. Sometimes the answer is advice, configuration, or a better existing tool. When building is justified, the scope stays focused."
+  />
+
+  <section class="section">
+    <div class="site-container grid gap-4 md:grid-cols-2">
+      {
+        services.map((service) => (
+          <article class="card p-7 sm:p-9">
+            <span class="text-xs font-bold tracking-[0.12em] text-[var(--accent)]">{service.number}</span>
+            <h2 class="mt-12 text-2xl font-semibold tracking-[-0.035em]">{service.title}</h2>
+            <p class="mt-4 text-base leading-7 text-[var(--text-soft)]">{service.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section divider">
+    <div class="site-container grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+      <div>
+        <span class="eyebrow">Working model</span>
+        <h2 class="section-title">Consult, test, build, transfer.</h2>
+      </div>
+      <ol class="grid gap-3">
+        {
+          [
+            ["Understand", "Map the objective, people, constraints, risks, and current tools."],
+            ["Agree", "Define a small outcome that can be tested without a large commitment."],
+            ["Deliver", "Configure an existing tool or build the narrow capability that is missing."],
+            ["Transfer", "Document ownership, access, data, operation, and the next sensible decision."],
+          ].map(([title, copy], index) => (
+            <li class="card grid gap-4 p-6 sm:grid-cols-[3rem_1fr]">
+              <span class="text-sm font-bold text-[var(--accent)]">0{index + 1}</span>
+              <div>
+                <h3 class="font-semibold">{title}</h3>
+                <p class="mt-2 text-sm leading-6 text-[var(--text-soft)]">{copy}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section divider">
+    <div class="narrow-container text-center">
+      <span class="eyebrow">A useful first step</span>
+      <h2 class="section-title mx-auto">Describe what is difficult today.</h2>
+      <p class="lede mx-auto">
+        A first conversation should produce clarity, even when custom software
+        is not the right answer.
+      </p>
+      <a class="button button-primary mt-8" href="/contact/">Contact SOCHSE</a>
+    </div>
+  </section>
+</BaseLayout>

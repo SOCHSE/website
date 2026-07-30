@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+}
+
+const {
+  title,
+  description,
+  path = Astro.url.pathname,
+} = Astro.props;
+
+const pageTitle = title === "SOCHSE" ? title : `${title} — SOCHSE`;
+const canonical = new URL(path, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#6657df" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SOCHSE" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{pageTitle}</title>
+    <script is:inline src="/theme.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <SiteHeader />
+    <main id="main-content">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

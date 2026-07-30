@@ -1,0 +1,41 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<footer class="border-t border-[var(--line)]">
+  <div class="site-container grid gap-10 py-12 md:grid-cols-[1.3fr_1fr_1fr]">
+    <div>
+      <Logo />
+      <p class="mt-4 max-w-sm text-sm leading-6 text-[var(--text-soft)]">
+        Founder-led consulting and focused software for difficult business and
+        technical problems.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Explore</p>
+      <div class="mt-4 grid gap-2 text-sm text-[var(--text-soft)]">
+        <a class="hover:text-[var(--text)]" href="/services/">Services</a>
+        <a class="hover:text-[var(--text)]" href="/compass/">SOCHSE Compass</a>
+        <a class="hover:text-[var(--text)]" href="/work/">Selected work</a>
+        <a class="hover:text-[var(--text)]" href="/about/">About</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="text-xs font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">Contact</p>
+      <div class="mt-4 grid gap-2 text-sm text-[var(--text-soft)]">
+        <a class="hover:text-[var(--text)]" href="mailto:sochsecompass@gmail.com">sochsecompass@gmail.com</a>
+        <a class="hover:text-[var(--text)]" href="/privacy/">Privacy</a>
+        <a class="hover:text-[var(--text)]" href="/terms/">Terms</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t border-[var(--line)]">
+    <div class="site-container flex flex-col gap-2 py-5 text-xs text-[var(--text-faint)] sm:flex-row sm:items-center sm:justify-between">
+      <span>© {new Date().getFullYear()} SOCHSE. Founder-operated in India.</span>
+      <span>Marketing direction. Under your control.</span>
+    </div>
+  </div>
+</footer>

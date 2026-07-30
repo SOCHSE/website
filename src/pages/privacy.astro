@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="Privacy policy"
+  description="Privacy policy for the SOCHSE public website and planned Compass integrations."
+  path="/privacy/"
+>
+  <PageHero
+    eyebrow="Legal"
+    title="Privacy policy"
+    description="How the SOCHSE public website and client-authorized Compass integrations handle information."
+  />
+
+  <section class="section">
+    <div class="narrow-container prose">
+      <p><strong>Effective date:</strong> 31 July 2026</p>
+
+      <h2>Public website</h2>
+      <p>
+        This is a static informational website. At launch, SOCHSE does not use
+        advertising cookies, behavioral tracking, or a website contact form.
+        If analytics are added later, this policy will be updated before use.
+      </p>
+      <p>
+        Cloudflare delivers and protects this website and may process ordinary
+        network and request information according to its own policies.
+      </p>
+
+      <h2>Email</h2>
+      <p>
+        When you email SOCHSE, the message, address, and information you provide
+        are used to respond, assess the request, and maintain appropriate
+        business records. Do not send passwords, API tokens, medical
+        information, financial account details, or other sensitive material in
+        an initial enquiry.
+      </p>
+
+      <h2>SOCHSE Compass and Google user data</h2>
+      <p>
+        Compass is under development. When a client explicitly enables a Google
+        Ads integration, Compass may request authorized access to account,
+        campaign, spend, and performance information needed for the agreed
+        reporting capability.
+      </p>
+      <p>
+        Client authorization is used only to provide and support the requested
+        Compass function. SOCHSE does not sell Google user data. Each client
+        installation is designed to keep its data and credentials isolated.
+        Access can be revoked through the relevant Google account controls.
+        Clients may request deletion of SOCHSE-controlled support records by
+        contacting the address below.
+      </p>
+      <p>
+        Use and transfer of information received from Google APIs will follow
+        the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noreferrer">
+          Google API Services User Data Policy
+        </a>,
+        including its Limited Use requirements.
+      </p>
+
+      <h2>Sharing</h2>
+      <p>
+        SOCHSE does not sell personal information. Information may be shared
+        only when needed with infrastructure or communication providers, when
+        directed by the relevant client, to protect rights and systems, or when
+        legally required.
+      </p>
+
+      <h2>Retention and security</h2>
+      <p>
+        Information is retained only as long as reasonably needed for the
+        stated purpose, contractual records, security, or legal obligations.
+        Reasonable technical and organizational safeguards are used, but no
+        internet service can promise absolute security.
+      </p>
+
+      <h2>Your choices</h2>
+      <p>
+        You may ask what information SOCHSE controls about you, request a
+        correction or deletion where applicable, or withdraw a voluntary
+        enquiry. Client integrations have separate authorization and
+        offboarding procedures.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Privacy questions: <a href="mailto:sochsecompass@gmail.com">sochsecompass@gmail.com</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

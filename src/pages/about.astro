@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+---
+
+<BaseLayout
+  title="About"
+  description="SOCHSE is a founder-operated consulting and custom software practice led by Srijit."
+  path="/about/"
+>
+  <PageHero
+    eyebrow="About SOCHSE"
+    title="Founder-led by design."
+    description="SOCHSE is operated by Srijit as a consulting and custom software practice. Work stays deliberately scoped, practical, and close to the person responsible for delivery."
+  />
+
+  <section class="section">
+    <div class="site-container grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+      <div>
+        <span class="tag">Srijit · Founder</span>
+      </div>
+      <div class="prose max-w-3xl">
+        <p class="text-xl leading-8 text-[var(--text)]">
+          SOCHSE exists for problems that sit awkwardly between consulting,
+          operations, data, and software.
+        </p>
+        <p>
+          The working approach is simple: understand the real constraint, use
+          an existing tool when it is sufficient, and build a narrow system
+          only when doing so creates durable value.
+        </p>
+        <p>
+          Founder work spans healthcare websites, private market-research
+          systems, intelligence gathering, long-video processing, Android
+          applications, on-device machine-learning exploration, and isolated
+          client infrastructure.
+        </p>
+
+        <h2>The name</h2>
+        <p>
+          SOCHSE draws from <em>soch</em>—thought, thinking, or
+          intelligence—and <em>se</em>, suggesting “with” or “through.” The
+          idea is simple: work with thought. Understand the problem before
+          choosing the tool.
+        </p>
+
+        <h2>How SOCHSE works</h2>
+        <ul>
+          <li>Small, explicit outcomes before large commitments.</li>
+          <li>Direct communication with the person doing the work.</li>
+          <li>Client-owned data and infrastructure where practical.</li>
+          <li>Reusable engineering without mixing client data.</li>
+          <li>Honest boundaries around work in progress and private systems.</li>
+        </ul>
+
+        <h2>Capacity</h2>
+        <p>
+          SOCHSE is not presented as a large agency. Work is accepted
+          selectively, scoped around available founder capacity, and may use
+          explicitly identified specialists when a project genuinely needs
+          them.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
