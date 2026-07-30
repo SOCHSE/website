@@ -25,15 +25,18 @@ npm run build
 
 ## Deployment
 
-Connect this repository to Cloudflare Workers Builds or deploy from an
-authenticated local environment:
+The production Worker is connected to the `main` branch through Cloudflare
+Workers Builds. A push to `main` builds and deploys the site. Build caching is
+intentionally disabled while the site remains small and static.
+
+An authenticated local environment can also deploy manually:
 
 ```bash
 npm run deploy
 ```
 
-Attach `sochse.in` as a Worker Custom Domain after the first preview has been
-reviewed. Deployment does not use the SOCHSE Oracle server.
+`sochse.in` is attached as the Worker Custom Domain. Deployment does not use
+the SOCHSE Oracle server.
 
 ## Content boundary
 
